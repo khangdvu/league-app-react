@@ -1,8 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import SideBar from './SideBar';
+import ChampContent from './ChampContent';
 
 function App() {
-  return null
+  return (
+    <div id='appDiv'>
+    <SideBar />
+    <ChampContent />
+    </div>
+  )
 }
 
 export default App;
