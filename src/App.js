@@ -1,12 +1,12 @@
 import './App.css';
-import SideBar from './SideBar';
-import ChampContent from './ChampContent';
+import ChampionComponent from './ChampionComponent';
+
+
 
 function App() {
   return (
     <div id='appDiv'>
-    <SideBar />
-    <ChampContent />
+    <ChampionComponent />
     </div>
   )
 }
