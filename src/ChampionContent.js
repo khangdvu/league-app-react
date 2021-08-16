@@ -1,7 +1,14 @@
 import React from 'react'
 
-export default function ChampContent(){
-    return (
-        <div className = 'championContentBox'></div>
-    )
+export default class ChampionContent extends React.Component{
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+        return (
+            <div className = 'championContentBox'>
+                {this.props.currentChampion}
+            </div>
+        )}
 }
