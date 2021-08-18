@@ -1,14 +1,24 @@
 import React from 'react'
 
 export default class ChampionContent extends React.Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
+        var championData;
+        var championInfo = [];
+        if (this.props.currentChampion !== '') {
+            //Discard two levels of header info in json file by going down "data" and "championName"
+            championData = require('./data/' + this.props.currentChampion + '.json')["data"][this.props.currentChampion];
+            championInfo.push(<>{championData['name']} </>)
+            championInfo.push(<>{championData['title']} </>)
+        }
+
+
+        
+
+
         return (
             <div className = 'championContentBox'>
-                {this.props.currentChampion}
+                {championInfo}
             </div>
         )}
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import championData from './static/champion.json';
+import championData from './data/champion.json';
 
 
 export default class SearchSideBar extends React.Component{
