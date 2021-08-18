@@ -1,14 +1,9 @@
 import React from 'react'
 
-import championData from './data/champion.json';
+import championData from './champion.json';
 
 
 export default class SearchSideBar extends React.Component{
-    constructor(props){
-        super(props)
-
-    }
-
 
     render(){
         let champions = [];
