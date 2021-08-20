@@ -4,15 +4,29 @@ import championData from './champion.json';
 
 
 export default class SearchSideBar extends React.Component{
+    constructor(props){
+        super(props);
+        this.onKeyUp = this.onKeyUp.bind(this);
+        this.state = {
+            searchInput: '',
+        }
+
+    }
+
+    onKeyUp(e){
+        this.setState({searchInput: e.target.value});
+    }
 
     render(){
         let champions = [];
         for (var champion in championData.data){
-            champions.push(champion);
+            if (champion.includes(this.state.searchInput)){
+                champions.push(champion);
+            }
         }
         return (
             <div className = 'searchSidebar'>
-                <input></input>
+                <input id ='searchInput' onKeyUp={e => this.onKeyUp(e)}></input>
                 {champions.map((champion, index) => (
                         <div className='searchSidebarItem' onClick={(e) => this.props.handlerChampionSelect(e)}>{champion}</div>
                     )

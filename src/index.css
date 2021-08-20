@@ -31,14 +31,10 @@
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
   cursor: pointer;
-  flex: 1;
   max-width: 100%;
-  height:min-content;
-  flex: 1;
-  align-items: center;
-  justify-content: flex-start;
+  height:3vh;
   border: 1px dashed yellowgreen;
-
+  text-align: center;
 }
 
 .championContentBox{
