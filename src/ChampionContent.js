@@ -13,12 +13,14 @@ export default class ChampionContent extends React.Component{
             championInfo.push(<>{championData['title']} </>);
             bgImageStyle = {
                 backgroundImage: "url(/img/" + this.props.currentChampion + ".jpg",
+                backgroundColor: "rgba(0, 0, 0, 0.9)",
 
             }
         }
 
         return (
-            <div className = 'championContentBox'  style={bgImageStyle}>
+            <div className = 'championContentBox'  >
+                <div class="bg" style={bgImageStyle}></div>
                 {championInfo}
             </div>
         )}

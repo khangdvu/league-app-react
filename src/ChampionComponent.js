@@ -14,9 +14,9 @@ export default class ChampionComponent extends React.Component {
 
 
     handlerChampionSelect(event){
-        let element = event.target;
+        let element = event.target
         this.setState(
-            {currentChampion: element.innerHTML}
+            {currentChampion: element.textContent}
         )
     }
 
