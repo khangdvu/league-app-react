@@ -1,5 +1,5 @@
 import React from 'react'
-
+import SpellsComponent from './SpellsComponent'
 
 export default class ChampionContent extends React.Component{
     render(){
@@ -22,6 +22,7 @@ export default class ChampionContent extends React.Component{
             <div className = 'championContentBox'  >
                 <div class="bg" style={bgImageStyle}></div>
                 {championInfo}
+                <SpellsComponent currentChampion = {this.props.currentChampion}/>
             </div>
         )}
 }
