@@ -1,4 +1,5 @@
 import React from 'react'
+import './SpellsComponent.css'
 
 
 export default class SpellsComponent extends React.Component{
@@ -18,9 +19,9 @@ export default class SpellsComponent extends React.Component{
             for(var spell of spellData){
                 spellRow.push(
                 <div className = 'spell'>
-                    <img src={"/spell/" + spell['image']['full']}></img>
-                    <span>{spell['name']} </span>
-                    <span>{spell['description']}</span>
+                    <img src={"/spell/" + spell['image']['full']}  className='spellImg'></img>
+                    <span className= 'spellName'>{spell['name']} </span>
+                    <span className= 'spellText'>{spell['description']}</span>
                 </div>)
             }
         }
