@@ -8,8 +8,9 @@
     height: calc(100vh - 2px);
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    animation: fadeIn 1s ease-in;
   }
+
   
   #bg{
     z-index: -1;
@@ -27,19 +28,24 @@
     display: flex;
     padding-left: 50px;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #8e9aaf;
     padding: 10px 10px 10px 10px;
   }
 
   #championTitle{
+    background-color: #cbc0d3;
     width: 100%;
     color: black;
     font: bolder;
     font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Beaufort for LOL", serif;
+    font-style: italic;
   }
 
   #championBlurb{
-    color: black;
+    margin-top: 30px;
+    color: #edf6f9;
     width: 100%;
     height: fit-content;
     font: bolder;
@@ -49,4 +55,9 @@
   .loadingSplash{
     height: 400px;
     vertical-align: middle;
+  }
+
+  @keyframes fadeIn {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
   }

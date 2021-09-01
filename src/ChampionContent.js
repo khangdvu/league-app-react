@@ -1,10 +1,13 @@
 import React from 'react'
 import SpellsComponent from './SpellsComponent'
 import './ChampionContent.css'
-import { TransitionGroup, CSSTransition } from "react-transition-group"
+import {Transition, TransitionGroup, CSSTransition } from "react-transition-group"
+
 
 
 export default class ChampionContent extends React.Component{
+
+
     render(){
         var championData;
         var championInfo = [];
@@ -25,10 +28,10 @@ export default class ChampionContent extends React.Component{
         }
 
         return (
-            <div className = 'championContentBox'>
-                    <div id="bg" style={bgImageStyle}></div>
-                    {championInfo}
-                    <SpellsComponent currentChampion = {this.props.currentChampion}/>
+            <div  key={this.props.currentChampion} className = 'championContentBox'>
+                <div id="bg" style={bgImageStyle}></div>
+                {championInfo}
+                <SpellsComponent currentChampion = {this.props.currentChampion}/>
             </div>
         )}
 }
