@@ -1,9 +1,7 @@
 .spellsContainer{
   display: flex;
-  flex: 2;
   justify-content: center;
   align-content: center;
-
 }
 
 .spell{
@@ -13,29 +11,29 @@
   border: 2px solid white;
   box-sizing: border-box;
   padding: 10px 10px 10px 10px;
-  height: 15rem;
-  width: 20rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  min-height: fit-content;
+  width: 22rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .spellImg{
   flex-grow: 1;
-  max-height:4rem;
+  max-height: 4rem;
   max-width: 4rem;
+  vertical-align: middle;
 }
 
 .spellName{
-  flex-grow: 1;
   flex: 1;
-  margin-top: 15px;
   margin-left: 15px;
-  justify-self: center;
   font-size: 2rem;
   color: black;
  
 }
 
 .spellText{
-  flex-grow: 4;
-  font-size: 1rem;
+  margin-top: 10px;
+  font-size: 1.3rem;
 }

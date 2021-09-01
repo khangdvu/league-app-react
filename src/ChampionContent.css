@@ -1,15 +1,14 @@
-
 .championContentBox{
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     flex: 1;
     width: 80%;
     height: calc(100vh - 2px);
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     border: 1px solid black;
-
   }
   
   #bg{
@@ -20,24 +19,34 @@
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: 0.4;
+  }
+
+  .championHeadings{
+    height: 380px;
+    max-width: 70%;
+    display: flex;
+    padding-left: 50px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 10px 10px 10px;
   }
 
   #championTitle{
+    width: 100%;
     color: black;
     font: bolder;
-    box-sizing: border-box;
-    padding-top: 10%;
-    padding-bottom: 5%;
     font-size: 2rem;
-    flex: 0;
   }
 
   #championBlurb{
     color: black;
+    width: 100%;
+    height: fit-content;
     font: bolder;
-    box-sizing: border-box;
-    margin: 0 5rem 10rem 10rem;
     font-size: 1.6rem;
-    flex: 0;
+  }
+
+  .loadingSplash{
+    height: 400px;
+    vertical-align: middle;
   }
