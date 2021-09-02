@@ -30,8 +30,8 @@ export default class SearchSideBar extends React.Component{
             <div className = 'searchSidebar'>
                 <input id ='searchInput' placeholder="Search..." onKeyUp={e => this.onKeyUp(e)}></input>
                     {champions.map((champion, index) => (
-                            <div className='searchSidebarItem' onClick={(e) => this.props.handlerChampionSelect(e)}>
-                                <img src={"/square/" + champion + ".png"} className="squareImage"></img>
+                            <div className='searchSidebarItem' id= {champion} onClick={(e) => this.props.handlerChampionSelect(e)}>
+                                <img src={"/square/" + champion + ".png"} className="squareImage" id= {champion}></img>
                                 <span>{champion}</span>
                                 </div>
                         )
