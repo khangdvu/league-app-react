@@ -32,7 +32,7 @@ export default class SearchSideBar extends React.Component{
                     {champions.map((champion, index) => (
                             <div className='searchSidebarItem' id= {champion} onClick={(e) => this.props.handlerChampionSelect(e)}>
                                 <img src={"/square/" + champion + ".png"} className="squareImage" id= {champion}></img>
-                                <span>{champion}</span>
+                                <span id= {champion}>{champion}</span>
                                 </div>
                         )
                     )}
