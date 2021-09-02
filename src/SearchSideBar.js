@@ -22,7 +22,7 @@ export default class SearchSideBar extends React.Component{
     render(){
         let champions = [];
         for (var champion in championData.data){
-            if (champion.includes(this.state.searchInput)){
+            if (champion.toLowerCase().includes(this.state.searchInput.toLowerCase())){
                 champions.push(champion);
             }
         }
