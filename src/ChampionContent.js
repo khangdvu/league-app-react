@@ -26,6 +26,14 @@ export default class ChampionContent extends React.Component{
                 opacity: "0.5"
             }
         }
+        else{
+            championInfo.push(
+                <div className="championHeadings">
+                    <img src="/LoLlogobanner.jpeg"></img>
+                    <span id='championTitle'>Wiki Application</span>
+                    <span id='championBlurb'>Click on a Champion on the Left for Info</span>
+                </div>);
+        }
 
         return (
             <div  key={this.props.currentChampion} className = 'championContentBox'>
