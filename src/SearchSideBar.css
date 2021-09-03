@@ -1,5 +1,6 @@
 .searchSidebar{
     position: relative;
+    z-index: 1;
     flex: 1;
     max-width: 10%;
     min-width: fit-content;
@@ -26,11 +27,10 @@
                                   supported by Chrome, Edge, Opera and Firefox */
     cursor: pointer;
     min-width: 100%;
-    height: 40px;
+    height: 35px;
     border: 1px solid #f2e9e4;
     align-items: left;
     background: #8e9aaf;
-    opacity: 0.9;
     animation: fadeIn 1s;    
   }
 
@@ -44,6 +44,7 @@
     font-family: "Beaufort for LOL", serif;
     font-style: italic;
     word-wrap: break-word;
+    font-size: 0.9rem;
   }
 
   .squareImage{
@@ -56,7 +57,7 @@
     background-color: #edf6f9;
     position: sticky;
     top: 0px;
-    height: 40px;
+    height: 30px;
     width: 100%;
     justify-self: center;
     padding-left: 5px;
