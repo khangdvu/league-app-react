@@ -1,36 +1,44 @@
 .spellsContainer{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
+  height: fit-content;
+  padding: 1em 1em 1em 1em;
 }
+
 
 .spell{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   border: 2px solid #fed9b7;
   box-sizing: border-box;
-  padding: 10px 10px 10px 10px;
   min-height: fit-content;
-  width: 300px;
+  width: 100%;
   align-items: flex-start;
   justify-content: flex-start;
   background-color: #fff1e6;
+  padding: 1em 1em 1em 1em;
+}
+
+.spell > * {
+  flex: 1 1 100%;
 }
 
 .spellImg{
   flex-grow: 1;
+  flex-basis: 100%;
   max-height: 3rem;
   max-width: 3rem;
   vertical-align: middle;
 }
 
 .spellName{
-  flex: 1;
-  margin-left: 5px;
-  padding-left: 15px;
-  font-size: 1.4rem;
+  min-width: fit-content;
+  flex: 100;
+  margin-top: 0.5em;
+  font-size: 1.2rem;
   color: black;
   text-transform: uppercase;
   background-color: #e2ece9;
@@ -39,9 +47,32 @@
 }
 
 .spellText{
-  margin-top: 10px;
-  padding-left: 5px;
-  font-size: 1.3rem;
+  padding: 1em 1em 0 0;
+  font-size: 1.1rem;
   color: #6d6875;
 
+}
+
+
+@media (max-width: 80em){
+
+  .spellsContainer{
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0.4em;
+
+  }
+
+  .spellName{
+    font-size: 1.2rem;
+   
+  }
+
+  
+  .spellText{
+    font-size: 1.1rem;
+    padding: 0.5em 0.5em 0 0;
+
+  
+  }
 }

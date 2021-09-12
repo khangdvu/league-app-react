@@ -38,7 +38,9 @@ export default class ChampionContent extends React.Component{
         return (
             <div  key={this.props.currentChampion} className = 'championContentBox'>
                 <div id="bg" style={bgImageStyle}></div>
-                {championInfo}
+                <div class="containerChampInfo">
+                    {championInfo}
+                </div>
                 <SpellsComponent currentChampion = {this.props.currentChampion}/>
             </div>
         )}

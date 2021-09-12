@@ -1,6 +1,6 @@
 .championContentBox{
     position: relative;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     flex: 1;
@@ -8,10 +8,22 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    animation: fadeIn 1.3s ease-in;
+    animation: fadeIn 1s ease-in;
     overflow-x: hidden;
+    margin: 0;
+
   }
 
+
+  .containerChampInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+    margin:0;
+    padding: 1.4em;
+  }
   
   #bg{
     z-index: -100;
@@ -24,14 +36,13 @@
   }
 
   .championHeadings{
-    min-height: 380px;
-    max-height: fit-content;
-    max-width: 70%;
+    min-height: 18em;
+    max-height:fit-content;
+    width: 70%;
     display: flex;
-    padding-left: 50px;
     flex-direction: column;
     background-color: #8e9aaf;
-    padding: 10px 10px 10px 10px;
+    padding: 1em 1em 1em 1em;
     overflow: hidden;
   }
 
@@ -40,28 +51,56 @@
     width: 100%;
     color: black;
     font: bolder;
-    font-size: 1.7rem;
+    padding-left: 0.5em;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-family: "Beaufort for LOL", serif;
     font-style: italic;
   }
 
   #championBlurb{
-    margin-top: 30px;
+    margin-top: 1em;
     color: #edf6f9;
     width: 100%;
     height: fit-content;
     font-family: "Raleway", sans-serif;
     font-style: italic;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .loadingSplash{
-    height: 400px;
+    height: 20em;
     vertical-align: middle;
   }
 
   @keyframes fadeIn {
+    
     0% {opacity: 0%;}
     100% {opacity: 100%;}
+  }
+
+  @media (max-width: 80em){
+    .containerChampInfo{
+      padding: 0.4em;
+    }
+    .championHeadings{
+      width: 90%;
+      height: fit-content;
+      padding: 1em 1em 1em 1em;
+
+    }
+  
+    #championTitle{
+      font-size: 1.3rem;
+    }
+  
+    #championBlurb{
+      font-size: 1.1rem;
+      margin-bottom: 1em;
+    }
+
+    .loadingSplash{
+      height: 15em;
+    }
+  
   }
