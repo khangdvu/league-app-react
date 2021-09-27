@@ -2,12 +2,13 @@
     position: relative;
     z-index: 1;
     flex: 1;
-    max-width: fit-content;
+    max-width: 10rem;
     min-width: 8em;
     height: calc(100vh - 3px);
     flex: 1;
     align-items: center;
     justify-content: flex-start;
+    background-color: #8e9aaf ;
     border: 1px solid black;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
